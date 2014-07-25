@@ -8,6 +8,7 @@ Languages Used:
 PHP
 HTML
 jQuery
+Javascript
 CSS
 MySQL
 Ajax
