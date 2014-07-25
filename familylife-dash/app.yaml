@@ -1,0 +1,67 @@
+application: familylife-dash
+version: 7
+runtime: php
+api_version: 1
+threadsafe: yes
+
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /
+  script: main.php
+
+- url: /InsertUser.php
+  script: admin/InsertUser.php
+  
+- url: /ajax.php
+  script: ajax.php
+
+- url: /index.php
+  script: admin/index.php
+
+- url: /users.php
+  script: admin/users.php
+
+- url: /arch.php
+  script: admin/arch.php
+  
+- url: /reports.php
+  script: admin/reports.php
+  
+- url: /stats.php
+  script: admin/stats.php
+  
+- url: /steps.php
+  script: admin/steps.php  
+    
+- url: /main.*
+  script: main.php
+  
+- url: /CriticalSteps.*
+  script: CriticalSteps.php
+
+- url: /warning.*
+  script: warning.php 
+  
+- url: /SaveStep.*
+  script: SaveStep.php
+  
+- url: /steps.php/SaveTools.*
+  script: admin/SaveTools.php
+  
+- url: /steps.php/SaveContent.*
+  script: admin/SaveContent.php
+  
+- url: /steps.php/SaveRatings.*
+  script: admin/SaveRatings.php
+  
+- url: /steps.php/SaveEventInfo.*
+  script: admin/SaveEventInfo.php
+  
+- url: /regions.*
+  script: regions.php
+  
+- url: /ClearStep.*
+  script: ClearStep.php
